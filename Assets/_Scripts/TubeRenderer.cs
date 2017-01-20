@@ -58,7 +58,7 @@ public class TubeRenderer : MonoBehaviour
 	}
 	void Start()
 	{
-		MeshRenderer mr = gameObject.GetComponent<MeshRenderer>();
+		mr = gameObject.GetComponent<MeshRenderer>();
 		mr.material = material;
 	}
 

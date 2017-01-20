@@ -2,6 +2,13 @@
 
 public class Player : MonoBehaviour {
 
+
+	[Range(0.01f, 1.0f)]
+	public float thresholdX = 0.01f;
+	[Range(0.01f, 1.0f)]
+	public float thresholdZ = 0.01f;
+
+	oscControl osc;
 	public PipeSystem pipeSystem;
 
 	public float startVelocity;
@@ -36,11 +43,12 @@ public class Player : MonoBehaviour {
 	}
 
 	public void Die () {
-		mainMenu.EndGame(distanceTraveled);
-		gameObject.SetActive(false);
+//		mainMenu.EndGame(distanceTraveled);
+//		gameObject.SetActive(false);
 	}
 
-	private void Awake () {
+	private void Start () {
+		osc = GetComponent<oscControl>();
 		world = pipeSystem.transform.parent;
 		rotater = transform.GetChild(0);
 		gameObject.SetActive(false);
@@ -80,7 +88,8 @@ public class Player : MonoBehaviour {
 			}
 		}
 		else {
-			rotationInput = Input.GetAxis("Horizontal");
+			
+			rotationInput = osc.rotation.x * 10; //Input.GetAxis("Horizontal"); //
 		}
 		avatarRotation += rotationVelocity * Time.deltaTime * rotationInput;
 		if (avatarRotation < 0f) {

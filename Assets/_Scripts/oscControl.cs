@@ -78,8 +78,8 @@ public class oscControl : MonoBehaviour {
 					rotation.z = (float)item.Value.packets[lastPacketIndex].Data[0];
 
 					rotation = LowPassFilter(rotation);
-					rotation.x *= 60;
-					rotation.z *= -60;
+//					rotation.x *= 60;
+//					rotation.z *= -60;
 				}
 
 			}

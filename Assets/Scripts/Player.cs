@@ -22,7 +22,7 @@ public class Player : MonoBehaviour {
 
 	private Pipe currentPipe;
 
-	public int time = 300; // in seconds
+	public float time = 99; // in seconds
 
 	private float acceleration, velocity;
 	private float distanceTraveled;
@@ -43,7 +43,7 @@ public class Player : MonoBehaviour {
 		currentPipe = pipeSystem.SetupFirstPipe();
 		SetupCurrentPipe();
 		gameObject.SetActive(true);
-		hud.SetValues(distanceTraveled, velocity, score);
+		hud.SetValues(distanceTraveled, velocity, score, (int)time);
 	}
 
 	public void AddScore(int value=1){
@@ -65,10 +65,10 @@ public class Player : MonoBehaviour {
 
 	private void Update () {
 
-//		time = (int)(((float)time)-Time.deltaTime);
-//		if(time <= 0){
-//			Die();
-//		}
+		time = time-Time.deltaTime;
+		if(time <= 0){
+			Die();
+		}
 
 		velocity += acceleration * Time.deltaTime;
 		float delta = velocity * Time.deltaTime;
@@ -87,7 +87,7 @@ public class Player : MonoBehaviour {
 
 		UpdateAvatarRotation();
 
-		hud.SetValues(distanceTraveled, velocity, score);
+		hud.SetValues(distanceTraveled, velocity, score, (int)time);
 	}
 
 	private void UpdateAvatarRotation () {

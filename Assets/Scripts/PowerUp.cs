@@ -11,7 +11,7 @@ public class PowerUp : MonoBehaviour {
 	};
 
 	public int cooldown; // in seconds
-
+	public float value;
 	public PowerUpType type;
 
 	// Use this for initialization

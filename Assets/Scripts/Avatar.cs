@@ -18,7 +18,18 @@ public class Avatar : MonoBehaviour {
 			player.AddScore();
 			Destroy(collider.gameObject);
 		}else if(collider.CompareTag("PowerUp")){
+			PowerUp pu = collider.gameObject.GetComponent<PowerUp>();
+			switch(pu.type){
+			case PowerUpType.Magnet:
+				break;
+			case PowerUpType.Speed:
+				break;
+			case PowerUpType.Time:
+				player.time += pu.value;
+				break;
 			
+			}
+
 		}else if(collider.CompareTag("Obsticle")){
 			if (deathCountdown < 0f) {
 				shape.enableEmission = false;

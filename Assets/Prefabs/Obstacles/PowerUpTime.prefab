@@ -92,7 +92,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &1891299244246998
 GameObject:
   m_ObjectHideFlags: 1
@@ -103,6 +103,8 @@ GameObject:
   - component: {fileID: 4389737696214986}
   - component: {fileID: 198567213613558962}
   - component: {fileID: 199006693001574562}
+  - component: {fileID: 135115136297154270}
+  - component: {fileID: 114408579785378000}
   m_Layer: 0
   m_Name: ErekiBall2
   m_TagString: PowerUp
@@ -288,6 +290,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f041aeb110e648f7a55e54320c29517, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114408579785378000
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1891299244246998}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6b51f19d09fa41b0904dca287a44386, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cooldown: 0
+  value: 30
+  type: 0
+--- !u!135 &135115136297154270
+SphereCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1891299244246998}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 8
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!198 &198567213613558962
 ParticleSystem:
   m_ObjectHideFlags: 1
@@ -343,7 +371,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 2
-  randomSeed: -396512898
+  randomSeed: -1789758161
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -2920,7 +2948,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 2
-  randomSeed: 1381512739
+  randomSeed: 1708750931
   InitialModule:
     serializedVersion: 3
     enabled: 1

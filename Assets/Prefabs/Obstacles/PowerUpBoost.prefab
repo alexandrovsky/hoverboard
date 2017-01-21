@@ -44,7 +44,7 @@ GameObject:
   - component: {fileID: 11462984}
   m_Layer: 0
   m_Name: PowerUpBoost
-  m_TagString: Collectable
+  m_TagString: PowerUp
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -550,7 +550,7 @@ ParticleSystem:
   moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 2
-  randomSeed: -1035974289
+  randomSeed: 427091552
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -5584,7 +5584,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 2
-  randomSeed: -289510717
+  randomSeed: 837834502
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -8185,7 +8185,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 2
-  randomSeed: -1636412265
+  randomSeed: -902950364
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -10774,7 +10774,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 2
-  randomSeed: 1762937604
+  randomSeed: -1203391330
   InitialModule:
     serializedVersion: 3
     enabled: 1

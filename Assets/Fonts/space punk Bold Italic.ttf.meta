@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: b69a298bb20d04246a7599a1fa781acb
+timeCreated: 1485004063
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: space punk
+  fontNames:
+  - space punk
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 5104ba382649d674caa042ddea0f8b32, type: 3}
+  - {fileID: 12800000, guid: 19c4da880872747458b6a232a655cd3b, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

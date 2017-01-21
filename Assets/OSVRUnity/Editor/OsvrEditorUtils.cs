@@ -28,12 +28,12 @@ using System;
 public class OsvrEditorUtils : EditorWindow
 {
     private const string OSVR_SERVER_ROOT = "OSVR_SERVER_ROOT";
-	private const string OSVR_SERVER_ROOT_DEFAULT = "/usr/local/bin/"; //Runtime OSVR Configurator Path
+    private const string OSVR_SERVER_ROOT_DEFAULT = "C:\\Program Files (x86)\\OSVR\\Runtime\\bin\\x64"; //Runtime OSVR Configurator Path
     private const string OSVR_CONFIG_RUNTIME_DIR = "C:\\Program Files (x86)\\OSVR\\Runtime\\config"; //Runtime OSVR Configurator Path
     private const string OSVR_CONFIG_SDK_DIR = "C:\\Program Files (x86)\\OSVR\\SDK\\config"; //SDK OSVR Configurator Path
-    private const string OSVR_SERVER_FILENAME = "osvr_server"; //default server filename
+    private const string OSVR_SERVER_FILENAME = "osvr_server.exe"; //default server filename
     private const string OSVR_SERVER_PROCESS = "osvr_server"; //default server filename
-	private const string OSVR_SERVER_CONFIG = "/usr/local/share/osvrcore/osvr_server_config.json"; //default server config
+    private const string OSVR_SERVER_CONFIG = "\"C:\\Program Files (x86)\\OSVR\\Runtime\\bin\\x64\\osvr_server_config.json\""; //default server config
     private const string OSVR_CONFIG_FILENAME = "OSVR-Config.exe"; //default server config
     private const string OSVR_UNITY_VER_X86 = "\\Plugins\\x86\\osvrUnity-ver.txt";
     private const string OSVR_UNITY_VER_X86_64 = "\\Plugins\\x86_64\\osvrUnity-ver.txt";

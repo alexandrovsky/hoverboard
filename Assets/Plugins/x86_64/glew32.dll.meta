@@ -1,10 +1,11 @@
 fileFormatVersion: 2
-guid: 61f578b4e95b48d4a96c1b31490a77fe
+guid: 2ac7f28edf9391241be697b81f895c69
 PluginImporter:
   serializedVersion: 1
   iconMap: {}
   executionOrder: {}
   isPreloaded: 0
+  isOverridable: 0
   platformData:
     Any:
       enabled: 1

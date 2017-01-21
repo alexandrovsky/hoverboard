@@ -3,7 +3,7 @@
 public class PipeSystem : MonoBehaviour {
 
 	public Pipe pipePrefab;
-
+	public Vector3 basicRotation;
 	public int pipeCount;
 
 	public int emptyPipeCount;

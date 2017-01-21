@@ -22,4 +22,10 @@ public class MainMenu : MonoBehaviour {
 		gameObject.SetActive(true);
 		Cursor.visible = true;
 	}
+
+	void Update(){
+		if(Input.GetKey(KeyCode.Return)){
+			StartGame(1);
+		}
+	}
 }

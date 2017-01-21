@@ -22,7 +22,7 @@ public class Player : MonoBehaviour {
 
 	private Pipe currentPipe;
 
-	public int time = 300;
+	public int time = 300; // in seconds
 
 	private float acceleration, velocity;
 	private float distanceTraveled;
@@ -52,8 +52,8 @@ public class Player : MonoBehaviour {
 
 	public void Die () {
 		osc.Vibrate();
-		mainMenu.EndGame(distanceTraveled);
-		gameObject.SetActive(false);
+		//mainMenu.EndGame(distanceTraveled);
+		//gameObject.SetActive(false);
 	}
 
 	private void Start () {
@@ -65,10 +65,10 @@ public class Player : MonoBehaviour {
 
 	private void Update () {
 
-		time = ((float)time)-Time.deltaTime;
-		if(time <= 0){
-			Die();
-		}
+//		time = (int)(((float)time)-Time.deltaTime);
+//		if(time <= 0){
+//			Die();
+//		}
 
 		velocity += acceleration * Time.deltaTime;
 		float delta = velocity * Time.deltaTime;

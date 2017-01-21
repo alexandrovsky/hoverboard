@@ -10,6 +10,10 @@ public class PowerUp : MonoBehaviour {
 		Magnet
 	};
 
+	public int cooldown; // in seconds
+
+	public PowerUpType type;
+
 	// Use this for initialization
 	void Start () {
 		

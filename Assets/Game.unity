@@ -37,7 +37,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.23310459, g: 0.20694813, b: 0.11621233, a: 1}
+  m_IndirectSpecularColor: {r: 0.39198068, g: 0.40181997, b: 0.38272095, a: 1}
 --- !u!157 &4
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -6908,7 +6908,7 @@ GameObject:
   - component: {fileID: 1357030382}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6924,7 +6924,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29456cf0fbc034d209a6b6d077852d97, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useKeyboard: 1
+  useKeyboard: 0
   thresholdX: 0.01
   thresholdZ: 0.01
   pipeSystem: {fileID: 527268613}
@@ -6936,6 +6936,7 @@ MonoBehaviour:
   - 0.025
   - 0.05
   - 0.1
+  time: 300
 --- !u!4 &1357030381
 Transform:
   m_ObjectHideFlags: 0

@@ -22,6 +22,8 @@ public class Player : MonoBehaviour {
 
 	private Pipe currentPipe;
 
+	public int time = 300;
+
 	private float acceleration, velocity;
 	private float distanceTraveled;
 	private float deltaToRotation;
@@ -62,6 +64,12 @@ public class Player : MonoBehaviour {
 	}
 
 	private void Update () {
+
+		time = ((float)time)-Time.deltaTime;
+		if(time <= 0){
+			Die();
+		}
+
 		velocity += acceleration * Time.deltaTime;
 		float delta = velocity * Time.deltaTime;
 		distanceTraveled += delta;

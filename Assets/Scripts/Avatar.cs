@@ -17,6 +17,8 @@ public class Avatar : MonoBehaviour {
 		if(collider.CompareTag("Collectable")){
 			player.AddScore();
 			Destroy(collider.gameObject);
+		}else if(collider.CompareTag("PowerUp")){
+			
 		}else if(collider.CompareTag("Obsticle")){
 			if (deathCountdown < 0f) {
 				shape.enableEmission = false;

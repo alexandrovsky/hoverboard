@@ -3,6 +3,7 @@
 public class Player : MonoBehaviour {
 
 
+	public bool useKeyboard = true;
 	[Range(0.01f, 1.0f)]
 	public float thresholdX = 0.01f;
 	[Range(0.01f, 1.0f)]
@@ -26,6 +27,7 @@ public class Player : MonoBehaviour {
 	private float deltaToRotation;
 	private float systemRotation;
 	private float worldRotation, avatarRotation;
+	private int score;
 
 	private Transform world, rotater;
 
@@ -39,13 +41,17 @@ public class Player : MonoBehaviour {
 		currentPipe = pipeSystem.SetupFirstPipe();
 		SetupCurrentPipe();
 		gameObject.SetActive(true);
-		hud.SetValues(distanceTraveled, velocity);
+		hud.SetValues(distanceTraveled, velocity, score);
+	}
+
+	public void AddScore(int value=1){
+		score += value;
 	}
 
 	public void Die () {
 		osc.Vibrate();
-//		mainMenu.EndGame(distanceTraveled);
-//		gameObject.SetActive(false);
+		mainMenu.EndGame(distanceTraveled);
+		gameObject.SetActive(false);
 	}
 
 	private void Start () {
@@ -73,7 +79,7 @@ public class Player : MonoBehaviour {
 
 		UpdateAvatarRotation();
 
-		hud.SetValues(distanceTraveled, velocity);
+		hud.SetValues(distanceTraveled, velocity, score);
 	}
 
 	private void UpdateAvatarRotation () {
@@ -89,8 +95,12 @@ public class Player : MonoBehaviour {
 			}
 		}
 		else {
-			
-			rotationInput = osc.rotation.x * 10; //Input.GetAxis("Horizontal"); //
+			if(useKeyboard){
+				rotationInput = Input.GetAxis("Horizontal"); //
+			}else{
+				rotationInput = osc.rotation.x * 10;
+			}
+
 		}
 		avatarRotation += rotationVelocity * Time.deltaTime * rotationInput;
 		if (avatarRotation < 0f) {

@@ -13,11 +13,17 @@ public class Avatar : MonoBehaviour {
 	}
 
 	private void OnTriggerEnter (Collider collider) {
-		if (deathCountdown < 0f) {
-			shape.enableEmission = false;
-			trail.enableEmission = false;
-			burst.Emit(burst.maxParticles);
-			deathCountdown = burst.startLifetime;
+
+		if(collider.CompareTag("Collectable")){
+			player.AddScore();
+			Destroy(collider.gameObject);
+		}else if(collider.CompareTag("Obsticle")){
+			if (deathCountdown < 0f) {
+				shape.enableEmission = false;
+				trail.enableEmission = false;
+				burst.Emit(burst.maxParticles);
+				deathCountdown = burst.startLifetime;
+			}
 		}
 	}
 	

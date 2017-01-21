@@ -22,7 +22,7 @@ public class SineOscillator : MonoBehaviour {
 	void Update () {
 		rect.anchoredPosition = new Vector2(
 			startPos.x + Mathf.Sin(Time.time * speed) * amplitudeX, 
-			startPos.y + Mathf.Sin(Time.time * speed) * amplitudeY
+			startPos.y + Mathf.Cos(Time.time * speed) * amplitudeY
 		);
 	}
 }

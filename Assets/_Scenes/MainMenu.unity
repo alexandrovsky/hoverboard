@@ -37,12 +37,12 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 0.07944017, g: 0.042147554, b: 0.10447291, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 7
-  m_GIWorkflowMode: 1
+  m_GIWorkflowMode: 0
   m_GISettings:
     serializedVersion: 2
     m_BounceScale: 1
@@ -188,6 +188,7 @@ GameObject:
   - component: {fileID: 379349845}
   - component: {fileID: 379349847}
   - component: {fileID: 379349846}
+  - component: {fileID: 379349848}
   m_Layer: 0
   m_Name: THighscore
   m_TagString: Untagged
@@ -210,7 +211,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -50, y: -146.06}
+  m_AnchoredPosition: {x: 0.6, y: -146.06}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &379349846
@@ -245,13 +246,27 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Exceptional Travelers
+  m_Text: Highscore
 --- !u!222 &379349847
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 379349844}
+--- !u!114 &379349848
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 379349844}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66350ef1a584e8d4bbe7a1c9fa212072, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  amplitudeX: 0
+  amplitudeY: 10
+  speed: 5
 --- !u!1 &543151558
 GameObject:
   m_ObjectHideFlags: 0
@@ -262,6 +277,7 @@ GameObject:
   - component: {fileID: 543151559}
   - component: {fileID: 543151561}
   - component: {fileID: 543151560}
+  - component: {fileID: 543151562}
   m_Layer: 0
   m_Name: TExit
   m_TagString: Untagged
@@ -326,6 +342,20 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 543151558}
+--- !u!114 &543151562
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 543151558}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66350ef1a584e8d4bbe7a1c9fa212072, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  amplitudeX: 0
+  amplitudeY: 10
+  speed: 5
 --- !u!1 &570870789
 GameObject:
   m_ObjectHideFlags: 0
@@ -501,6 +531,7 @@ GameObject:
   - component: {fileID: 769239167}
   - component: {fileID: 769239169}
   - component: {fileID: 769239168}
+  - component: {fileID: 769239170}
   m_Layer: 0
   m_Name: TBegin
   m_TagString: Untagged
@@ -565,6 +596,20 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 769239166}
+--- !u!114 &769239170
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 769239166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66350ef1a584e8d4bbe7a1c9fa212072, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  amplitudeX: 0
+  amplitudeY: 10
+  speed: 5
 --- !u!1 &877983801
 GameObject:
   m_ObjectHideFlags: 0

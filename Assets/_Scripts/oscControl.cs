@@ -45,7 +45,7 @@ public class oscControl : MonoBehaviour {
 	
 	// Script initialization
 	void Start() {	
-		OSCHandler.Instance.Init("hoverboard", 3333, "", "", 0); //init OSC
+		OSCHandler.Instance.Init("hoverboard", 3333, "phone", "134.102.150.174", 9000); //init OSC
 		servers = new Dictionary<string, ServerLog>();
 	}
 
@@ -72,7 +72,6 @@ public class oscControl : MonoBehaviour {
 //						item.Value.packets[lastPacketIndex].Data[i].ToString())); // value
 				}
 
-
 				if(item.Value.packets[lastPacketIndex].Address == "/accxyz"){
 					rotation.x = (float)item.Value.packets[lastPacketIndex].Data[1];
 					rotation.z = (float)item.Value.packets[lastPacketIndex].Data[0];
@@ -86,6 +85,13 @@ public class oscControl : MonoBehaviour {
 	    }
 	}
 
+
+	public void Vibrate(){
+		foreach(KeyValuePair<string, ClientLog> client in OSCHandler.Instance.Clients){
+			OSCMessage message = new OSCMessage("/vibrate");
+			client.Value.client.Send(message);
+		}
+	}
 
 	Vector3 LowPassFilter(Vector3 input){
 

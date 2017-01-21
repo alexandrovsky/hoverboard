@@ -99,11 +99,6 @@ public class OSCHandler : MonoBehaviour
 		if(serverName.Length > 0 && serverPort > 1024){
 			CreateServer(serverName, serverPort);
 		}	
-
-
-        //Initialize OSC servers (listeners)
-        //Example:
-
         
 	}
 	

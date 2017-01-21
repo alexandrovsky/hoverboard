@@ -43,6 +43,7 @@ public class Player : MonoBehaviour {
 	}
 
 	public void Die () {
+		osc.Vibrate();
 //		mainMenu.EndGame(distanceTraveled);
 //		gameObject.SetActive(false);
 	}

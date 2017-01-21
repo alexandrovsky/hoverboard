@@ -506,7 +506,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 2
-  randomSeed: 1530097978
+  randomSeed: 292256840
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -9834,6 +9834,10 @@ Prefab:
     - target: {fileID: 436198, guid: 0b82dd794175b304a87805e4b38fbe84, type: 2}
       propertyPath: m_RootOrder
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11436198, guid: 0b82dd794175b304a87805e4b38fbe84, type: 2}
+      propertyPath: AppID
+      value: de.tzi.dm.hoverboard
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0b82dd794175b304a87805e4b38fbe84, type: 2}

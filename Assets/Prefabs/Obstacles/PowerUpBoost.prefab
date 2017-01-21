@@ -258,6 +258,8 @@ GameObject:
   - component: {fileID: 4893924882966616}
   - component: {fileID: 198319983391161160}
   - component: {fileID: 199692938842446958}
+  - component: {fileID: 135024236411552656}
+  - component: {fileID: 114836333212366174}
   m_Layer: 0
   m_Name: GreenCore
   m_TagString: Untagged
@@ -495,6 +497,32 @@ MonoBehaviour:
   flashingOff: 0
   flashingOffPower: 0
   flashingOffIntensity: 1
+--- !u!114 &114836333212366174
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1925294886691996}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6b51f19d09fa41b0904dca287a44386, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cooldown: 10
+  value: 0
+  type: 0
+--- !u!135 &135024236411552656
+SphereCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1925294886691996}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 8
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!198 &198259706354779434
 ParticleSystem:
   m_ObjectHideFlags: 1

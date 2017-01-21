@@ -33,6 +33,8 @@ public class oscControl : MonoBehaviour {
 	[Range(0.0f, 1.0f)]
 	public float dryWet = 0.5f;
 
+	public String touchOscIp = "134.102.150.174";
+
 
 
 	Queue<Vector3> lpfQueue = new Queue<Vector3>();
@@ -45,7 +47,7 @@ public class oscControl : MonoBehaviour {
 	
 	// Script initialization
 	void Start() {	
-		OSCHandler.Instance.Init("hoverboard", 3333, "phone", "134.102.150.174", 9000); //init OSC
+		OSCHandler.Instance.Init("hoverboard", 3333, "phone", touchOscIp, 9000); //init OSC
 		servers = new Dictionary<string, ServerLog>();
 	}
 

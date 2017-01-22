@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
-
+using System.Collections.Generic;
 public class Player : MonoBehaviour {
 
+	public List<PowerUpType> powerUps = new List<PowerUpType>();
 
 	public bool useKeyboard = true;
 	[Range(0.01f, 1.0f)]
@@ -22,7 +23,10 @@ public class Player : MonoBehaviour {
 
 	private Pipe currentPipe;
 
-	private float acceleration, velocity;
+	public float time = 99; // in seconds
+
+
+	public float acceleration, velocity;
 	private float distanceTraveled;
 	private float deltaToRotation;
 	private float systemRotation;
@@ -41,7 +45,7 @@ public class Player : MonoBehaviour {
 		currentPipe = pipeSystem.SetupFirstPipe();
 		SetupCurrentPipe();
 		gameObject.SetActive(true);
-		hud.SetValues(distanceTraveled, velocity, score);
+		hud.SetValues(distanceTraveled, velocity, score, (int)time);
 	}
 
 	public void AddScore(int value=1){
@@ -50,8 +54,8 @@ public class Player : MonoBehaviour {
 
 	public void Die () {
 		osc.Vibrate();
-		mainMenu.EndGame(distanceTraveled);
-		gameObject.SetActive(false);
+		//mainMenu.EndGame(distanceTraveled);
+		//gameObject.SetActive(false);
 	}
 
 	private void Start () {
@@ -62,6 +66,12 @@ public class Player : MonoBehaviour {
 	}
 
 	private void Update () {
+
+		time = time-Time.deltaTime;
+		if(time <= 0){
+			Die();
+		}
+
 		velocity += acceleration * Time.deltaTime;
 		float delta = velocity * Time.deltaTime;
 		distanceTraveled += delta;
@@ -79,7 +89,7 @@ public class Player : MonoBehaviour {
 
 		UpdateAvatarRotation();
 
-		hud.SetValues(distanceTraveled, velocity, score);
+		hud.SetValues(distanceTraveled, velocity, score, (int)time);
 	}
 
 	private void UpdateAvatarRotation () {

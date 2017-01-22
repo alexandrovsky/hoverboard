@@ -88,15 +88,7 @@ MonoBehaviour:
   minCurveSegmentCount: 4
   maxCurveSegmentCount: 10
   generators:
-  - {fileID: 11442172, guid: 15420fb26a39f424ab92188e373b8051, type: 2}
-  - {fileID: 11442172, guid: 15420fb26a39f424ab92188e373b8051, type: 2}
-  - {fileID: 11442172, guid: 7a9123c8d69a1499396ce3962523a4da, type: 2}
-  - {fileID: 11442172, guid: 7a9123c8d69a1499396ce3962523a4da, type: 2}
-  - {fileID: 11442172, guid: 7a9123c8d69a1499396ce3962523a4da, type: 2}
-  - {fileID: 11442172, guid: c2bb6b3e2135b432c8262818dab4b1cf, type: 2}
-  - {fileID: 11403388, guid: 0b79394367fa940e0b824fac3c09a129, type: 2}
-  - {fileID: 11403388, guid: f44504c1880b44ec688c1df9eae543e2, type: 2}
-  - {fileID: 11403388, guid: 7e94e8096f2bb410b8fc10a4e38784c4, type: 2}
+  - {fileID: 11442172, guid: 5812aab5c7536084598de9a3af0f4441, type: 2}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

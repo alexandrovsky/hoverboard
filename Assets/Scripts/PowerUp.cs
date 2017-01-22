@@ -21,13 +21,13 @@ public class PowerUp : MonoBehaviour {
 	void Start () {
 		
 	}
-	
+
 	// Update is called once per frame
 	void Update () {
 		
 	}
 
-	IEnumerator Callback(float val){
-		yield return new WaitForSeconds(cooldown);
+	public virtual IEnumerator Callback(Player player){
+		yield return null;
 	}
 }

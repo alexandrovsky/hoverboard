@@ -1,5 +1,5 @@
 ﻿using UnityEngine;
-
+using System.Linq;
 public class Avatar : MonoBehaviour {
 
 	public ParticleSystem shape, trail, burst;
@@ -18,11 +18,24 @@ public class Avatar : MonoBehaviour {
 			player.AddScore();
 			Destroy(collider.gameObject);
 		}else if(collider.CompareTag("PowerUp")){
-			PowerUp pu = collider.gameObject.GetComponent<PowerUp>();
+			PowerUpBoost pu = collider.gameObject.GetComponent<PowerUpBoost>();
 			switch(pu.type){
 			case PowerUpType.Magnet:
 				break;
 			case PowerUpType.Speed:
+				bool found = false;
+				foreach(PowerUpType type in player.powerUps){
+					if(type == PowerUpType.Speed){
+						found = true;
+						break;
+					}
+				}
+				if(!found){
+					StartCoroutine(pu.Callback(player));
+				}else{
+					
+				}
+
 				break;
 			case PowerUpType.Time:
 				player.time += pu.value;

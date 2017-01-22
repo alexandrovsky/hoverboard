@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
-
+using System.Collections.Generic;
 public class Player : MonoBehaviour {
 
+	public List<PowerUpType> powerUps = new List<PowerUpType>();
 
 	public bool useKeyboard = true;
 	[Range(0.01f, 1.0f)]
@@ -24,7 +25,8 @@ public class Player : MonoBehaviour {
 
 	public float time = 99; // in seconds
 
-	private float acceleration, velocity;
+
+	public float acceleration, velocity;
 	private float distanceTraveled;
 	private float deltaToRotation;
 	private float systemRotation;

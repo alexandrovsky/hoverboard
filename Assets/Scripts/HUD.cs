@@ -3,12 +3,12 @@ using UnityEngine.UI;
 
 public class HUD : MonoBehaviour {
 
-	public Text distanceLabel, velocityLabel, scoreLabel, timeLabel;
+	public Text velocityLabel, scoreLabel, timeLabel;
 
-	public void SetValues (float distanceTraveled, float velocity, int score, int time) {
-		distanceLabel.text = ((int)(distanceTraveled * 10f)).ToString();
-		velocityLabel.text = ((int)(velocity * 10f)).ToString();
-		scoreLabel.text = score.ToString();
-		timeLabel.text = time.ToString();
+	public void SetValues (int score, int time, float velocity) {
+		
+		velocityLabel.text = "Speed: " +  ((int)(velocity * 10f)).ToString();
+		scoreLabel.text = "Points: " +  score.ToString();
+		timeLabel.text = time.ToString() + "s";
 	}
 }

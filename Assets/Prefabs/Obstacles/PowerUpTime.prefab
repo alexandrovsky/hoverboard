@@ -302,7 +302,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cooldown: 0
-  value: 30
+  value: 3
   type: 0
 --- !u!135 &135115136297154270
 SphereCollider:
@@ -371,7 +371,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 2
-  randomSeed: -1789758161
+  randomSeed: 2044610841
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -2948,7 +2948,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 2
-  randomSeed: 1708750931
+  randomSeed: 1059152355
   InitialModule:
     serializedVersion: 3
     enabled: 1

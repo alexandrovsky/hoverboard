@@ -45,7 +45,7 @@ public class Player : MonoBehaviour {
 		currentPipe = pipeSystem.SetupFirstPipe();
 		SetupCurrentPipe();
 		gameObject.SetActive(true);
-		hud.SetValues(distanceTraveled, velocity, score, (int)time);
+		hud.SetValues(score, (int)time, velocity);
 	}
 
 	public void AddScore(int value=1){
@@ -62,7 +62,8 @@ public class Player : MonoBehaviour {
 		osc = GetComponent<oscControl>();
 		world = pipeSystem.transform.parent;
 		rotater = transform.GetChild(0);
-		gameObject.SetActive(false);
+
+		StartGame(0);
 	}
 
 	private void Update () {
@@ -89,7 +90,7 @@ public class Player : MonoBehaviour {
 
 		UpdateAvatarRotation();
 
-		hud.SetValues(distanceTraveled, velocity, score, (int)time);
+		hud.SetValues(score, (int)time, velocity);
 	}
 
 	private void UpdateAvatarRotation () {
